@@ -1,0 +1,362 @@
+[
+  {
+    "id": "T001",
+    "title": "Password reset link expired",
+    "product": "account",
+    "category": "authentication",
+    "status": "resolved",
+    "issue": "The password reset email arrived late. Opening the reset URL shows RESET_TOKEN_EXPIRED and I cannot choose a password.",
+    "resolution": "Request a fresh reset link and use the newest email within 30 minutes. Older links stop working after another request."
+  },
+  {
+    "id": "T002",
+    "title": "Old reset email used",
+    "product": "account",
+    "category": "authentication",
+    "status": "resolved",
+    "issue": "I requested two password reset emails. The first email says the token is invalid even though it is recent.",
+    "resolution": "Use the most recently requested reset email. Requesting a replacement invalidates every earlier reset token."
+  },
+  {
+    "id": "T003",
+    "title": "Reset link consumed by mail scanner",
+    "product": "account",
+    "category": "authentication",
+    "status": "resolved",
+    "issue": "The first click on my password reset link reports RESET_TOKEN_USED. Our company security scanner opens links automatically.",
+    "resolution": "Ask the mail administrator to exempt the reset URL from automatic link opening, then request a fresh link. Do not reuse the consumed link."
+  },
+  {
+    "id": "T004",
+    "title": "Authenticator code rejected",
+    "product": "account",
+    "category": "authentication",
+    "status": "resolved",
+    "issue": "My password works but the six digit authenticator code is rejected as MFA_CODE_INVALID.",
+    "resolution": "Enable automatic time on the phone, reopen the authenticator, and enter the current code before it expires."
+  },
+  {
+    "id": "T005",
+    "title": "Lost phone with MFA enabled",
+    "product": "account",
+    "category": "authentication",
+    "status": "resolved",
+    "issue": "I replaced my phone and no longer have the authenticator. I cannot pass the second factor after logging in.",
+    "resolution": "Use an unused recovery code saved during setup. If no recovery code remains, contact the account administrator for identity verification and MFA reset."
+  },
+  {
+    "id": "T006",
+    "title": "Company SSO redirect mismatch",
+    "product": "account",
+    "category": "authentication",
+    "status": "resolved",
+    "issue": "Signing in through our identity provider fails with SSO_REDIRECT_URI_MISMATCH. Password reset does not help.",
+    "resolution": "The organization administrator must update the identity provider redirect URI to the exact callback URL displayed in the SSO settings."
+  },
+  {
+    "id": "T007",
+    "title": "SSO user not assigned",
+    "product": "account",
+    "category": "authentication",
+    "status": "resolved",
+    "issue": "Corporate sign in shows SSO_USER_NOT_ASSIGNED for one new employee. Other people can sign in.",
+    "resolution": "Assign the employee to the application in the identity provider and confirm the configured email matches the account email."
+  },
+  {
+    "id": "T008",
+    "title": "Locked after failed passwords",
+    "product": "account",
+    "category": "authentication",
+    "status": "resolved",
+    "issue": "Too many wrong passwords caused ACCOUNT_LOCKED. A correct password still cannot sign in.",
+    "resolution": "Wait 15 minutes for the temporary lock to expire. Reset the password if necessary and avoid repeated attempts during the lock period."
+  },
+  {
+    "id": "T009",
+    "title": "Reset email missing",
+    "product": "account",
+    "category": "authentication",
+    "status": "open",
+    "issue": "I requested a password reset but no email has arrived, including in spam. Delivery logs have not been reviewed.",
+    "resolution": ""
+  },
+  {
+    "id": "T010",
+    "title": "Recovery verification pending",
+    "product": "account",
+    "category": "authentication",
+    "status": "open",
+    "issue": "Both my phone and all MFA recovery codes were lost. Account ownership verification is still pending.",
+    "resolution": ""
+  },
+  {
+    "id": "T011",
+    "title": "Cloud upload quota reached",
+    "product": "cloud",
+    "category": "storage",
+    "status": "resolved",
+    "issue": "Uploads fail with STORAGE_QUOTA_EXCEEDED. The workspace storage meter is at 100 percent.",
+    "resolution": "Delete unnecessary stored files and empty the cloud trash, or ask the workspace administrator to upgrade storage. Retry after the quota meter updates."
+  },
+  {
+    "id": "T012",
+    "title": "Trash consumes storage",
+    "product": "cloud",
+    "category": "storage",
+    "status": "resolved",
+    "issue": "I deleted large cloud files but the workspace still says storage is full. The deleted files remain in trash.",
+    "resolution": "Empty the cloud trash permanently to release storage. Verify the usage meter before uploading again."
+  },
+  {
+    "id": "T013",
+    "title": "Workspace pooled quota exhausted",
+    "product": "cloud",
+    "category": "storage",
+    "status": "resolved",
+    "issue": "My folder is small but I cannot upload because the team shared storage limit was reached.",
+    "resolution": "Ask the workspace administrator to review pooled storage across members, remove unused content, or increase the workspace allowance."
+  },
+  {
+    "id": "T014",
+    "title": "Cloud synchronization network timeout",
+    "product": "cloud",
+    "category": "sync",
+    "status": "resolved",
+    "issue": "Sync stalls with SYNC_NETWORK_TIMEOUT on office Wi Fi. The storage quota has plenty of room.",
+    "resolution": "Test a different network and ensure the proxy or firewall permits the documented sync endpoint. Retry synchronization once connectivity is restored."
+  },
+  {
+    "id": "T015",
+    "title": "Proxy blocks sync traffic",
+    "product": "cloud",
+    "category": "sync",
+    "status": "resolved",
+    "issue": "Cloud files sync on mobile data but not behind our corporate proxy. The client shows connection refused.",
+    "resolution": "Ask the network administrator to allow the sync endpoint through the proxy and verify proxy settings in the client."
+  },
+  {
+    "id": "T016",
+    "title": "Conflicting file versions",
+    "product": "cloud",
+    "category": "sync",
+    "status": "resolved",
+    "issue": "Two computers edited the same document offline. Synchronization created a conflicted copy.",
+    "resolution": "Keep both copies, compare their changes, merge the desired content, then save a single final version after both computers are online."
+  },
+  {
+    "id": "T017",
+    "title": "Folder excluded from sync",
+    "product": "cloud",
+    "category": "sync",
+    "status": "resolved",
+    "issue": "One folder does not appear locally while other cloud folders synchronize normally.",
+    "resolution": "Open selective sync settings and enable that folder. Allow the initial download to complete."
+  },
+  {
+    "id": "T018",
+    "title": "Cloud permission denied",
+    "product": "cloud",
+    "category": "storage",
+    "status": "resolved",
+    "issue": "I can view a shared folder but uploading into it fails with FOLDER_PERMISSION_DENIED.",
+    "resolution": "Ask the folder owner to grant editor access. Viewer permission does not permit uploading or modifying files."
+  },
+  {
+    "id": "T019",
+    "title": "Intermittent sync under investigation",
+    "product": "cloud",
+    "category": "sync",
+    "status": "open",
+    "issue": "SYNC_NETWORK_TIMEOUT continues across two networks despite a firewall check. Diagnostics are awaiting review.",
+    "resolution": ""
+  },
+  {
+    "id": "T020",
+    "title": "Storage meter discrepancy",
+    "product": "cloud",
+    "category": "storage",
+    "status": "open",
+    "issue": "The quota meter reports full storage after trash was emptied yesterday. The usage reconciliation is still being investigated.",
+    "resolution": ""
+  },
+  {
+    "id": "T021",
+    "title": "Two settled subscription charges",
+    "product": "billing",
+    "category": "payments",
+    "status": "resolved",
+    "issue": "The bank statement shows two posted subscription charges for the same invoice and billing period. Both transactions have settled.",
+    "resolution": "Submit the invoice number and both settled transaction references to billing support. A confirmed duplicate settled charge is refunded to the original payment method."
+  },
+  {
+    "id": "T022",
+    "title": "Duplicate invoice charged twice",
+    "product": "billing",
+    "category": "payments",
+    "status": "resolved",
+    "issue": "One subscription invoice has two completed payments with different transaction IDs. Neither is pending.",
+    "resolution": "Billing support should compare the completed payments against the invoice and refund the verified duplicate to the original payment method."
+  },
+  {
+    "id": "T023",
+    "title": "Pending card authorization alongside charge",
+    "product": "billing",
+    "category": "payments",
+    "status": "resolved",
+    "issue": "My bank displays one posted subscription charge and a second pending amount. I think I paid twice.",
+    "resolution": "The pending amount is a temporary card authorization, not a second settled payment. It normally disappears within 5 to 7 business days; contact billing if it settles or remains longer."
+  },
+  {
+    "id": "T024",
+    "title": "Two pending authorizations after retry",
+    "product": "billing",
+    "category": "payments",
+    "status": "resolved",
+    "issue": "I retried card checkout and now see two pending card entries, with no posted charges yet.",
+    "resolution": "Wait for the temporary authorizations to expire within 5 to 7 business days. Check the invoice payment status and contact billing if more than one charge settles."
+  },
+  {
+    "id": "T025",
+    "title": "Expired payment card",
+    "product": "billing",
+    "category": "payments",
+    "status": "resolved",
+    "issue": "The subscription renewal fails with PAYMENT_CARD_EXPIRED. The old card is no longer valid.",
+    "resolution": "Replace the card in billing settings, then retry the unpaid invoice. Confirm the new expiration date and billing address."
+  },
+  {
+    "id": "T026",
+    "title": "Invoice tax address wrong",
+    "product": "billing",
+    "category": "payments",
+    "status": "resolved",
+    "issue": "Our invoice lists the wrong company billing address and tax details. The payment itself succeeded.",
+    "resolution": "Update the organization billing profile and request a corrected invoice from billing support. Updating the profile does not automatically rewrite older invoices."
+  },
+  {
+    "id": "T027",
+    "title": "Canceled plan still active",
+    "product": "billing",
+    "category": "payments",
+    "status": "resolved",
+    "issue": "I canceled the subscription but paid features remain available and the plan says canceled at period end.",
+    "resolution": "Cancellation stops the next renewal. Paid access remains available until the end of the already paid billing period."
+  },
+  {
+    "id": "T028",
+    "title": "Refund request still under review",
+    "product": "billing",
+    "category": "payments",
+    "status": "open",
+    "issue": "I reported two settled payments but billing has not confirmed whether they belong to the same invoice.",
+    "resolution": ""
+  },
+  {
+    "id": "T029",
+    "title": "Desktop app blank after update",
+    "product": "desktop",
+    "category": "application",
+    "status": "resolved",
+    "issue": "The desktop application opens to a white blank window after an update. Browser access still works.",
+    "resolution": "Quit the application fully, clear its local UI cache using the troubleshooting menu, and reopen it. Back up unsynced work before clearing any application data."
+  },
+  {
+    "id": "T030",
+    "title": "Desktop proxy certificate error",
+    "product": "desktop",
+    "category": "application",
+    "status": "resolved",
+    "issue": "The desktop app cannot connect and displays CERT_AUTHORITY_INVALID behind the company inspection proxy.",
+    "resolution": "Ask the administrator to install the approved corporate root certificate in the operating system trust store. Do not disable certificate verification."
+  },
+  {
+    "id": "T031",
+    "title": "Desktop export empty selection",
+    "product": "desktop",
+    "category": "application",
+    "status": "resolved",
+    "issue": "Export creates an empty CSV even though records are visible. The current selected rows count is zero.",
+    "resolution": "Select the rows to include or choose export all filtered records, then export again."
+  },
+  {
+    "id": "T032",
+    "title": "Desktop update requires restart",
+    "product": "desktop",
+    "category": "application",
+    "status": "resolved",
+    "issue": "The new app version was downloaded but the application still reports the previous version.",
+    "resolution": "Save your work, quit all application windows, and restart the app to apply the downloaded update."
+  },
+  {
+    "id": "T033",
+    "title": "Desktop cannot save local file",
+    "product": "desktop",
+    "category": "application",
+    "status": "resolved",
+    "issue": "Saving an exported file to a protected folder fails with LOCAL_WRITE_PERMISSION_DENIED.",
+    "resolution": "Choose a folder where your operating system account has write permission, or ask an administrator to grant the necessary access."
+  },
+  {
+    "id": "T034",
+    "title": "Desktop high CPU unexplained",
+    "product": "desktop",
+    "category": "application",
+    "status": "open",
+    "issue": "The application uses high CPU while idle. A performance trace is awaiting engineering analysis.",
+    "resolution": ""
+  },
+  {
+    "id": "T035",
+    "title": "Cloud filename unsupported",
+    "product": "cloud",
+    "category": "sync",
+    "status": "resolved",
+    "issue": "One file will not synchronize because its name contains characters forbidden on the destination operating system.",
+    "resolution": "Rename the file using characters supported on all synchronized devices, then retry syncing that file."
+  },
+  {
+    "id": "T036",
+    "title": "Account invitation expired",
+    "product": "account",
+    "category": "authentication",
+    "status": "resolved",
+    "issue": "An invitation to join a workspace reports INVITE_EXPIRED. I have never completed registration.",
+    "resolution": "Ask the workspace administrator to send a new invitation. Open the latest invitation with the intended account email."
+  },
+  {
+    "id": "T037",
+    "title": "Billing access missing",
+    "product": "billing",
+    "category": "payments",
+    "status": "resolved",
+    "issue": "I am a workspace member but cannot open invoices or payment settings.",
+    "resolution": "Ask the workspace owner to grant billing administrator access. General member access does not include payment management."
+  },
+  {
+    "id": "T038",
+    "title": "Desktop sign in blocked by clock",
+    "product": "desktop",
+    "category": "application",
+    "status": "resolved",
+    "issue": "The desktop client shows TOKEN_NOT_YET_VALID although browser login works. The computer clock is several hours behind.",
+    "resolution": "Enable automatic date and time on the computer, restart the client, and sign in again."
+  },
+  {
+    "id": "T039",
+    "title": "Cloud deleted file recovery",
+    "product": "cloud",
+    "category": "storage",
+    "status": "resolved",
+    "issue": "I accidentally removed a cloud document yesterday and need to restore it.",
+    "resolution": "Open cloud trash and restore the document before the retention period ends. Permanently deleted items cannot be restored through trash."
+  },
+  {
+    "id": "T040",
+    "title": "Password change does not fix SSO",
+    "product": "account",
+    "category": "authentication",
+    "status": "resolved",
+    "issue": "An SSO login failure persists after changing my local account password. The company identity provider reports an invalid callback address.",
+    "resolution": "Ask the organization administrator to correct the identity provider redirect URI to match the exact SSO callback URL. A local password reset does not change SSO configuration."
+  }
+]
