@@ -1,0 +1,114 @@
+[
+  {
+    "id": "reset-expired",
+    "query": "The email to change my password says the link is too old. How do I get back in?",
+    "filters": {},
+    "relevant_ids": [
+      "T001",
+      "T002"
+    ]
+  },
+  {
+    "id": "mfa-clock",
+    "query": "My password is accepted but the six digit code from my phone never works.",
+    "filters": {},
+    "relevant_ids": [
+      "T004"
+    ]
+  },
+  {
+    "id": "lost-mfa",
+    "query": "I got a new phone and cannot complete the second login step. I have backup codes.",
+    "filters": {},
+    "relevant_ids": [
+      "T005"
+    ]
+  },
+  {
+    "id": "sso-callback",
+    "query": "SSO_REDIRECT_URI_MISMATCH appears when our employees use company sign in.",
+    "filters": {},
+    "relevant_ids": [
+      "T006",
+      "T040"
+    ]
+  },
+  {
+    "id": "quota",
+    "query": "Uploads stopped because our shared cloud space is full.",
+    "filters": {},
+    "relevant_ids": [
+      "T011",
+      "T012",
+      "T013"
+    ]
+  },
+  {
+    "id": "sync-network",
+    "query": "Files synchronize on a hotspot but fail to connect on the office network.",
+    "filters": {},
+    "relevant_ids": [
+      "T014",
+      "T015"
+    ]
+  },
+  {
+    "id": "duplicate-settled",
+    "query": "Two completed charges paid the same subscription invoice. Neither charge is pending.",
+    "filters": {},
+    "relevant_ids": [
+      "T021",
+      "T022"
+    ]
+  },
+  {
+    "id": "pending-hold",
+    "query": "I see one completed payment and a second card entry that is still pending.",
+    "filters": {},
+    "relevant_ids": [
+      "T023"
+    ]
+  },
+  {
+    "id": "card-expired",
+    "query": "PAYMENT_CARD_EXPIRED prevents subscription renewal.",
+    "filters": {},
+    "relevant_ids": [
+      "T025"
+    ]
+  },
+  {
+    "id": "desktop-blank",
+    "query": "After installing an update the application window is completely white.",
+    "filters": {
+      "product": "desktop",
+      "status": "resolved"
+    },
+    "relevant_ids": [
+      "T029"
+    ]
+  },
+  {
+    "id": "cloud-filter",
+    "query": "I need to recover a document I deleted yesterday.",
+    "filters": {
+      "product": "cloud",
+      "category": "storage",
+      "status": "resolved"
+    },
+    "relevant_ids": [
+      "T039"
+    ]
+  },
+  {
+    "id": "open-network",
+    "query": "SYNC_NETWORK_TIMEOUT continues and the diagnostics are not yet reviewed.",
+    "filters": {
+      "product": "cloud",
+      "status": "open"
+    },
+    "relevant_ids": [
+      "T019"
+    ]
+  }
+]
