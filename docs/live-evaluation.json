@@ -1,0 +1,844 @@
+{
+  "kind": "development_retrieval",
+  "case_count": 12,
+  "dataset": {
+    "dataset": {
+      "id": "tickets_3094f2daafe24c87813bb2fe7514e812",
+      "name": "Synthetic support tickets",
+      "ticket_count": 40,
+      "model": "nomic-embed-text",
+      "embedding_identity": {
+        "model": "nomic-embed-text",
+        "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+      },
+      "dimension": 768,
+      "created_at": 1791150573.021842,
+      "fingerprint": "c4dc5af15da1190faf625727dde050c713d911e3a6797b104fab51c194e3bf7e",
+      "filters": {
+        "product": [
+          "account",
+          "billing",
+          "cloud",
+          "desktop"
+        ],
+        "category": [
+          "application",
+          "authentication",
+          "payments",
+          "storage",
+          "sync"
+        ],
+        "status": [
+          "open",
+          "resolved"
+        ]
+      }
+    },
+    "datasets": [
+      {
+        "id": "tickets_3094f2daafe24c87813bb2fe7514e812",
+        "name": "Synthetic support tickets",
+        "ticket_count": 40,
+        "model": "nomic-embed-text",
+        "embedding_identity": {
+          "model": "nomic-embed-text",
+          "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+        },
+        "dimension": 768,
+        "created_at": 1791150573.021842,
+        "fingerprint": "c4dc5af15da1190faf625727dde050c713d911e3a6797b104fab51c194e3bf7e",
+        "filters": {
+          "product": [
+            "account",
+            "billing",
+            "cloud",
+            "desktop"
+          ],
+          "category": [
+            "application",
+            "authentication",
+            "payments",
+            "storage",
+            "sync"
+          ],
+          "status": [
+            "open",
+            "resolved"
+          ]
+        }
+      }
+    ],
+    "filters": {
+      "product": [
+        "account",
+        "billing",
+        "cloud",
+        "desktop"
+      ],
+      "category": [
+        "application",
+        "authentication",
+        "payments",
+        "storage",
+        "sync"
+      ],
+      "status": [
+        "open",
+        "resolved"
+      ]
+    },
+    "ticket_count": 40
+  },
+  "modes": {
+    "keyword": {
+      "mean": {
+        "precision_at_3": 0.4444444444444444,
+        "recall_at_5": 0.9583333333333334,
+        "mrr_at_5": 1.0,
+        "timing_ms": 3.5666666666666664
+      },
+      "cases": [
+        {
+          "id": "reset-expired",
+          "query": "The email to change my password says the link is too old. How do I get back in?",
+          "filters": {},
+          "relevant_ids": [
+            "T001",
+            "T002"
+          ],
+          "ranked_ids": [
+            "T002",
+            "T001",
+            "T003",
+            "T040",
+            "T008"
+          ],
+          "timing_ms": 3.4,
+          "precision_at_3": 0.6666666666666666,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "mfa-clock",
+          "query": "My password is accepted but the six digit code from my phone never works.",
+          "filters": {},
+          "relevant_ids": [
+            "T004"
+          ],
+          "ranked_ids": [
+            "T004",
+            "T005",
+            "T003",
+            "T036",
+            "T009"
+          ],
+          "timing_ms": 2.0,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "lost-mfa",
+          "query": "I got a new phone and cannot complete the second login step. I have backup codes.",
+          "filters": {},
+          "relevant_ids": [
+            "T005"
+          ],
+          "ranked_ids": [
+            "T005",
+            "T010",
+            "T036",
+            "T023",
+            "T017"
+          ],
+          "timing_ms": 4.1,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "sso-callback",
+          "query": "SSO_REDIRECT_URI_MISMATCH appears when our employees use company sign in.",
+          "filters": {},
+          "relevant_ids": [
+            "T006",
+            "T040"
+          ],
+          "ranked_ids": [
+            "T006",
+            "T026",
+            "T003",
+            "T007",
+            "T038"
+          ],
+          "timing_ms": 2.4,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 0.5,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "quota",
+          "query": "Uploads stopped because our shared cloud space is full.",
+          "filters": {},
+          "relevant_ids": [
+            "T011",
+            "T012",
+            "T013"
+          ],
+          "ranked_ids": [
+            "T013",
+            "T011",
+            "T020",
+            "T012",
+            "T018"
+          ],
+          "timing_ms": 4.0,
+          "precision_at_3": 0.6666666666666666,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "sync-network",
+          "query": "Files synchronize on a hotspot but fail to connect on the office network.",
+          "filters": {},
+          "relevant_ids": [
+            "T014",
+            "T015"
+          ],
+          "ranked_ids": [
+            "T014",
+            "T015",
+            "T011",
+            "T012",
+            "T018"
+          ],
+          "timing_ms": 2.4,
+          "precision_at_3": 0.6666666666666666,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "duplicate-settled",
+          "query": "Two completed charges paid the same subscription invoice. Neither charge is pending.",
+          "filters": {},
+          "relevant_ids": [
+            "T021",
+            "T022"
+          ],
+          "ranked_ids": [
+            "T022",
+            "T021",
+            "T024",
+            "T023",
+            "T028"
+          ],
+          "timing_ms": 1.9,
+          "precision_at_3": 0.6666666666666666,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "pending-hold",
+          "query": "I see one completed payment and a second card entry that is still pending.",
+          "filters": {},
+          "relevant_ids": [
+            "T023"
+          ],
+          "ranked_ids": [
+            "T023",
+            "T024",
+            "T022",
+            "T025",
+            "T010"
+          ],
+          "timing_ms": 2.0,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "card-expired",
+          "query": "PAYMENT_CARD_EXPIRED prevents subscription renewal.",
+          "filters": {},
+          "relevant_ids": [
+            "T025"
+          ],
+          "ranked_ids": [
+            "T025",
+            "T027",
+            "T021",
+            "T022",
+            "T023"
+          ],
+          "timing_ms": 1.9,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "desktop-blank",
+          "query": "After installing an update the application window is completely white.",
+          "filters": {
+            "product": "desktop",
+            "status": "resolved"
+          },
+          "relevant_ids": [
+            "T029"
+          ],
+          "ranked_ids": [
+            "T029",
+            "T032",
+            "T033",
+            "T038",
+            "T031"
+          ],
+          "timing_ms": 6.1,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "cloud-filter",
+          "query": "I need to recover a document I deleted yesterday.",
+          "filters": {
+            "product": "cloud",
+            "category": "storage",
+            "status": "resolved"
+          },
+          "relevant_ids": [
+            "T039"
+          ],
+          "ranked_ids": [
+            "T039",
+            "T012"
+          ],
+          "timing_ms": 7.5,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "open-network",
+          "query": "SYNC_NETWORK_TIMEOUT continues and the diagnostics are not yet reviewed.",
+          "filters": {
+            "product": "cloud",
+            "status": "open"
+          },
+          "relevant_ids": [
+            "T019"
+          ],
+          "ranked_ids": [
+            "T019"
+          ],
+          "timing_ms": 5.1,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        }
+      ]
+    },
+    "vector": {
+      "mean": {
+        "precision_at_3": 0.4722222222222222,
+        "recall_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "timing_ms": 40.333333333333336
+      },
+      "cases": [
+        {
+          "id": "reset-expired",
+          "query": "The email to change my password says the link is too old. How do I get back in?",
+          "filters": {},
+          "relevant_ids": [
+            "T001",
+            "T002"
+          ],
+          "ranked_ids": [
+            "T001",
+            "T003",
+            "T002",
+            "T008",
+            "T009"
+          ],
+          "timing_ms": 51.2,
+          "precision_at_3": 0.6666666666666666,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "mfa-clock",
+          "query": "My password is accepted but the six digit code from my phone never works.",
+          "filters": {},
+          "relevant_ids": [
+            "T004"
+          ],
+          "ranked_ids": [
+            "T004",
+            "T008",
+            "T010",
+            "T040",
+            "T002"
+          ],
+          "timing_ms": 25.8,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "lost-mfa",
+          "query": "I got a new phone and cannot complete the second login step. I have backup codes.",
+          "filters": {},
+          "relevant_ids": [
+            "T005"
+          ],
+          "ranked_ids": [
+            "T005",
+            "T010",
+            "T008",
+            "T024",
+            "T002"
+          ],
+          "timing_ms": 24.9,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "sso-callback",
+          "query": "SSO_REDIRECT_URI_MISMATCH appears when our employees use company sign in.",
+          "filters": {},
+          "relevant_ids": [
+            "T006",
+            "T040"
+          ],
+          "ranked_ids": [
+            "T006",
+            "T007",
+            "T040",
+            "T026",
+            "T011"
+          ],
+          "timing_ms": 31.9,
+          "precision_at_3": 0.6666666666666666,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "quota",
+          "query": "Uploads stopped because our shared cloud space is full.",
+          "filters": {},
+          "relevant_ids": [
+            "T011",
+            "T012",
+            "T013"
+          ],
+          "ranked_ids": [
+            "T011",
+            "T013",
+            "T012",
+            "T018",
+            "T020"
+          ],
+          "timing_ms": 30.8,
+          "precision_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "sync-network",
+          "query": "Files synchronize on a hotspot but fail to connect on the office network.",
+          "filters": {},
+          "relevant_ids": [
+            "T014",
+            "T015"
+          ],
+          "ranked_ids": [
+            "T014",
+            "T035",
+            "T016",
+            "T015",
+            "T017"
+          ],
+          "timing_ms": 43.0,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "duplicate-settled",
+          "query": "Two completed charges paid the same subscription invoice. Neither charge is pending.",
+          "filters": {},
+          "relevant_ids": [
+            "T021",
+            "T022"
+          ],
+          "ranked_ids": [
+            "T022",
+            "T021",
+            "T023",
+            "T024",
+            "T028"
+          ],
+          "timing_ms": 55.7,
+          "precision_at_3": 0.6666666666666666,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "pending-hold",
+          "query": "I see one completed payment and a second card entry that is still pending.",
+          "filters": {},
+          "relevant_ids": [
+            "T023"
+          ],
+          "ranked_ids": [
+            "T023",
+            "T024",
+            "T022",
+            "T021",
+            "T028"
+          ],
+          "timing_ms": 72.5,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "card-expired",
+          "query": "PAYMENT_CARD_EXPIRED prevents subscription renewal.",
+          "filters": {},
+          "relevant_ids": [
+            "T025"
+          ],
+          "ranked_ids": [
+            "T025",
+            "T027",
+            "T023",
+            "T024",
+            "T036"
+          ],
+          "timing_ms": 61.5,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "desktop-blank",
+          "query": "After installing an update the application window is completely white.",
+          "filters": {
+            "product": "desktop",
+            "status": "resolved"
+          },
+          "relevant_ids": [
+            "T029"
+          ],
+          "ranked_ids": [
+            "T029",
+            "T032",
+            "T030",
+            "T031",
+            "T038"
+          ],
+          "timing_ms": 29.7,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "cloud-filter",
+          "query": "I need to recover a document I deleted yesterday.",
+          "filters": {
+            "product": "cloud",
+            "category": "storage",
+            "status": "resolved"
+          },
+          "relevant_ids": [
+            "T039"
+          ],
+          "ranked_ids": [
+            "T039",
+            "T012",
+            "T018",
+            "T011",
+            "T013"
+          ],
+          "timing_ms": 30.3,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "open-network",
+          "query": "SYNC_NETWORK_TIMEOUT continues and the diagnostics are not yet reviewed.",
+          "filters": {
+            "product": "cloud",
+            "status": "open"
+          },
+          "relevant_ids": [
+            "T019"
+          ],
+          "ranked_ids": [
+            "T019",
+            "T020"
+          ],
+          "timing_ms": 26.7,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        }
+      ]
+    },
+    "hybrid": {
+      "mean": {
+        "precision_at_3": 0.4722222222222222,
+        "recall_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "timing_ms": 40.733333333333334
+      },
+      "cases": [
+        {
+          "id": "reset-expired",
+          "query": "The email to change my password says the link is too old. How do I get back in?",
+          "filters": {},
+          "relevant_ids": [
+            "T001",
+            "T002"
+          ],
+          "ranked_ids": [
+            "T001",
+            "T002",
+            "T003",
+            "T008",
+            "T040"
+          ],
+          "timing_ms": 35.2,
+          "precision_at_3": 0.6666666666666666,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "mfa-clock",
+          "query": "My password is accepted but the six digit code from my phone never works.",
+          "filters": {},
+          "relevant_ids": [
+            "T004"
+          ],
+          "ranked_ids": [
+            "T004",
+            "T005",
+            "T008",
+            "T010",
+            "T003"
+          ],
+          "timing_ms": 35.3,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "lost-mfa",
+          "query": "I got a new phone and cannot complete the second login step. I have backup codes.",
+          "filters": {},
+          "relevant_ids": [
+            "T005"
+          ],
+          "ranked_ids": [
+            "T005",
+            "T010",
+            "T023",
+            "T036",
+            "T008"
+          ],
+          "timing_ms": 33.8,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "sso-callback",
+          "query": "SSO_REDIRECT_URI_MISMATCH appears when our employees use company sign in.",
+          "filters": {},
+          "relevant_ids": [
+            "T006",
+            "T040"
+          ],
+          "ranked_ids": [
+            "T006",
+            "T026",
+            "T007",
+            "T003",
+            "T040"
+          ],
+          "timing_ms": 36.9,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "quota",
+          "query": "Uploads stopped because our shared cloud space is full.",
+          "filters": {},
+          "relevant_ids": [
+            "T011",
+            "T012",
+            "T013"
+          ],
+          "ranked_ids": [
+            "T013",
+            "T011",
+            "T012",
+            "T020",
+            "T018"
+          ],
+          "timing_ms": 38.7,
+          "precision_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "sync-network",
+          "query": "Files synchronize on a hotspot but fail to connect on the office network.",
+          "filters": {},
+          "relevant_ids": [
+            "T014",
+            "T015"
+          ],
+          "ranked_ids": [
+            "T014",
+            "T015",
+            "T035",
+            "T011",
+            "T017"
+          ],
+          "timing_ms": 55.2,
+          "precision_at_3": 0.6666666666666666,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "duplicate-settled",
+          "query": "Two completed charges paid the same subscription invoice. Neither charge is pending.",
+          "filters": {},
+          "relevant_ids": [
+            "T021",
+            "T022"
+          ],
+          "ranked_ids": [
+            "T022",
+            "T021",
+            "T024",
+            "T023",
+            "T028"
+          ],
+          "timing_ms": 29.8,
+          "precision_at_3": 0.6666666666666666,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "pending-hold",
+          "query": "I see one completed payment and a second card entry that is still pending.",
+          "filters": {},
+          "relevant_ids": [
+            "T023"
+          ],
+          "ranked_ids": [
+            "T023",
+            "T024",
+            "T022",
+            "T025",
+            "T010"
+          ],
+          "timing_ms": 34.3,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "card-expired",
+          "query": "PAYMENT_CARD_EXPIRED prevents subscription renewal.",
+          "filters": {},
+          "relevant_ids": [
+            "T025"
+          ],
+          "ranked_ids": [
+            "T025",
+            "T027",
+            "T023",
+            "T021",
+            "T022"
+          ],
+          "timing_ms": 42.4,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "desktop-blank",
+          "query": "After installing an update the application window is completely white.",
+          "filters": {
+            "product": "desktop",
+            "status": "resolved"
+          },
+          "relevant_ids": [
+            "T029"
+          ],
+          "ranked_ids": [
+            "T029",
+            "T032",
+            "T033",
+            "T030",
+            "T038"
+          ],
+          "timing_ms": 63.4,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "cloud-filter",
+          "query": "I need to recover a document I deleted yesterday.",
+          "filters": {
+            "product": "cloud",
+            "category": "storage",
+            "status": "resolved"
+          },
+          "relevant_ids": [
+            "T039"
+          ],
+          "ranked_ids": [
+            "T039",
+            "T012",
+            "T018",
+            "T011",
+            "T013"
+          ],
+          "timing_ms": 40.5,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        },
+        {
+          "id": "open-network",
+          "query": "SYNC_NETWORK_TIMEOUT continues and the diagnostics are not yet reviewed.",
+          "filters": {
+            "product": "cloud",
+            "status": "open"
+          },
+          "relevant_ids": [
+            "T019"
+          ],
+          "ranked_ids": [
+            "T019",
+            "T020"
+          ],
+          "timing_ms": 43.3,
+          "precision_at_3": 0.3333333333333333,
+          "recall_at_5": 1.0,
+          "mrr_at_5": 1.0
+        }
+      ]
+    }
+  },
+  "embedding_model": "nomic-embed-text"
+}
