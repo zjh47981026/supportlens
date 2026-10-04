@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "supportlens"
+version = "1.0.0"
+description = "Evidence-first support ticket search with Qdrant, local embeddings, and reviewed response drafts"
+requires-python = ">=3.12"
+dependencies = ["qdrant-client==1.19.1"]
+
+[project.scripts]
+supportlens = "supportlens.server:main"
+
+[tool.setuptools.packages.find]
+include = ["supportlens*"]
+
+[tool.setuptools.package-data]
+supportlens = ["static/*", "fixtures/*.json"]
